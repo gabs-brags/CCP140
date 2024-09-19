@@ -1,14 +1,14 @@
 #include <iostream>
 using namespace std;
 
-class Endereco{
-    string rua, bairro;
-    int numero;
-
+class Data{
+    private:
+        int dia, mes, ano;
+    
     public:
-        Endereco(string rua, int numero, string bairro): rua{rua}, numero{numero}, bairro{bairro}{}
+        Data(int dia, int mes, int ano): dia{dia}, mes{mes}, ano{ano}{}
 
-        string getEndereco(){
-            return rua + "," + to_string(numero) + " - " + bairro;
+        string getData(){
+            return to_string(dia)+"/"+to_string(mes)+"/"+to_string(ano);
         }
 };
