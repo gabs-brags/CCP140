@@ -10,10 +10,12 @@ class Pessoa{
         long cpf;
         Data nascimento;
         Endereco endereco;
-
+    
     public:
-        Pessoa(string nome, string sobrenome, long cpf, int dia, int mes, int ano, Endereco endereco):
-        nome{nome}, sobrenome{sobrenome}, nascimento{dia, mes, ano}, endereco{endereco}
+        Pessoa(string nome, string sobrenome, long cpf,
+               int dia, int mes, int ano, Endereco endereco):
+        nome{nome}, sobrenome{sobrenome}, nascimento{dia, mes, ano},
+        endereco{endereco}
         {
             this->cpf = cpf;
         }
@@ -24,7 +26,7 @@ class Pessoa{
         }
 
         void setNome(string nome){
-            this->nome = nome;
+            this->nome = nome;    
         }
 
         void setSobrenome(string sobrenome){
@@ -36,8 +38,8 @@ class Pessoa{
         }
 
         string getNome(){
-            return nome;
-        }
+            return this->nome;
+        } 
 
         string getSobrenome(){
             return sobrenome;
@@ -54,4 +56,4 @@ class Pessoa{
         string getEndereco(){
             return this->endereco.getEndereco();
         }
-};
+};        
